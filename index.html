@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>islands - Coming Soon</title>
+    <meta
+      name="description"
+      content="The internet is made of islands. A new way to create, connect, and exist online."
+    />
+    <link rel="preload" as="image" href="./islands-bg-optimized.jpg" />
+    <link rel="preload" as="image" href="./islands-word.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="stage" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <header class="site-header">
+        <img class="header-mark" src="./islands-word.png" alt="islands" />
+        <p>Coming Soon</p>
+      </header>
+
+      <section class="hero">
+        <img id="hero-title" class="hero-wordmark" src="./islands-word.png" alt="islands" />
+        <div class="intro-copy">
+          <p>the internet is made of islands.</p>
+          <p>a new way to create, connect, and exist online.</p>
+        </div>
+      </section>
+
+      <section class="signup" aria-label="Email updates">
+        <p>something beautiful is coming.</p>
+        <form onsubmit="event.preventDefault(); this.dataset.sent = 'true';">
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="enter your email" autocomplete="email" />
+          <button type="submit" aria-label="Join the waitlist">
+            <span aria-hidden="true">→</span>
+          </button>
+        </form>
+      </section>
+
+      <footer class="site-footer">
+        <div>
+          <img class="footer-mark" src="./islands-word_white.png" alt="islands" />
+          <nav aria-label="Footer">
+            <a href="#about">about</a>
+            <a href="#updates">updates</a>
+            <a href="mailto:hello@islands.bio">contact</a>
+          </nav>
+        </div>
+        <p>© 2024 Islands. All rights reserved.</p>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,296 @@
+:root {
+  --ink: #0c0d11;
+  --white: #fff;
+  --soft-white: rgba(255, 255, 255, 0.86);
+  --line: rgba(255, 255, 255, 0.62);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 17px;
+  color: var(--ink);
+  background: var(--white);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.stage {
+  position: relative;
+  width: min(820px, calc(100vw - 74px));
+  min-height: min(1000px, calc(100svh - 34px));
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 32px;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  padding: 31px 37px 35px;
+  box-shadow: 0 1px 0 rgba(9, 12, 16, 0.08);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("./islands-bg-optimized.jpg");
+  background-size: cover;
+  background-position: 50% 56%;
+  filter: saturate(1.02) contrast(1.01);
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03), transparent 42%, rgba(0, 8, 18, 0.11) 66%, rgba(0, 8, 18, 0.48) 100%),
+    radial-gradient(circle at 72% 17%, rgba(255, 230, 180, 0.12), transparent 34%);
+  pointer-events: none;
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-header {
+  font-size: 13px;
+  line-height: 1;
+  transform: translateY(-7px);
+}
+
+.site-header p,
+.site-footer p,
+.signup p,
+.intro-copy p {
+  margin: 0;
+}
+
+.header-mark {
+  width: 78px;
+  height: auto;
+  display: block;
+  transform: translateX(-9px);
+}
+
+.hero {
+  align-self: start;
+  justify-self: center;
+  width: 100%;
+  padding-top: clamp(72px, 8.6svh, 94px);
+  text-align: center;
+}
+
+.hero-wordmark {
+  width: min(500px, 60vw);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.24));
+}
+
+.intro-copy {
+  margin-top: 19px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.signup {
+  justify-self: center;
+  align-self: end;
+  width: min(263px, 100%);
+  margin-bottom: 69px;
+  color: var(--soft-white);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.42);
+}
+
+.signup form {
+  height: 42px;
+  margin-top: 17px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(5, 17, 30, 0.21);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+}
+
+.signup input {
+  min-width: 0;
+  flex: 1;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0 18px;
+  color: var(--white);
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+}
+
+.signup input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.signup button {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  color: var(--white);
+  background: rgba(3, 9, 18, 0.78);
+  font: inherit;
+  font-size: 19px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.signup button:hover,
+.signup button:focus-visible {
+  transform: translateX(2px);
+  background: rgba(3, 9, 18, 0.95);
+}
+
+.site-footer {
+  color: var(--white);
+  font-size: 11px;
+  line-height: 1.1;
+}
+
+.footer-mark {
+  width: 53px;
+  height: auto;
+  display: block;
+  margin-bottom: 21px;
+}
+
+.site-footer nav {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+}
+
+.site-footer a,
+.site-footer p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: var(--white);
+}
+
+.site-footer > p {
+  align-self: end;
+  margin-bottom: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 12px;
+  }
+
+  .stage {
+    width: calc(100vw - 24px);
+    min-height: calc(100svh - 24px);
+    border-radius: 26px;
+    padding: 24px 26px 29px;
+  }
+
+  .hero-bg {
+    background-position: 50% 50%;
+  }
+
+  .header-mark {
+    width: 78px;
+  }
+
+  .site-header {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding-top: 13svh;
+  }
+
+  .hero-wordmark {
+    width: min(440px, 80vw);
+  }
+
+  .intro-copy {
+    margin-top: 18px;
+    font-size: 14px;
+  }
+
+  .signup {
+    margin-bottom: 46px;
+  }
+
+  .site-footer {
+    display: grid;
+    gap: 18px;
+  }
+
+  .footer-mark {
+    margin-bottom: 17px;
+  }
+
+  .site-footer nav {
+    gap: 24px;
+  }
+
+  .site-footer > p {
+    justify-self: start;
+  }
+}
+
+@media (max-height: 760px) {
+  .hero {
+    padding-top: 10svh;
+  }
+
+  .signup {
+    margin-bottom: 36px;
+  }
+}
