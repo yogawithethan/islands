@@ -6,6 +6,7 @@
   --line: rgba(255, 255, 255, 0.62);
   --font-sans: "Manrope", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   --font-serif: "Newsreader", Georgia, serif;
+  --font-mono: "SF Mono", "Geist Mono", "JetBrains Mono", "IBM Plex Mono", Consolas, monospace;
 }
 
 * {
@@ -474,8 +475,7 @@ form[data-sent="true"] .form-status {
   padding-bottom: 72px;
 }
 
-.about-kicker,
-.web-label {
+.about-kicker {
   margin: 0 0 16px;
   color: rgba(255, 255, 255, 0.62);
   font-size: 13px;
@@ -590,9 +590,9 @@ form[data-sent="true"] .form-status {
 .web-cards {
   margin-top: 34px;
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.16fr) minmax(0, 0.92fr);
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.18fr) minmax(0, 1fr);
   align-items: stretch;
-  gap: 14px;
+  gap: 16px;
 }
 
 .web-card {
@@ -625,14 +625,6 @@ form[data-sent="true"] .form-status {
   border-radius: 50%;
 }
 
-.web-card-large {
-  transform: translateY(28px);
-}
-
-.web-card-own {
-  transform: translateY(-14px);
-}
-
 .web-card h3 {
   margin: 0;
   color: #fff;
@@ -656,6 +648,24 @@ form[data-sent="true"] .form-status {
 
 .web-card-top .web-label {
   margin: 0;
+}
+
+.web-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.76);
+  background: rgba(2, 10, 18, 0.24);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .web-icon {
@@ -860,11 +870,6 @@ form[data-sent="true"] .form-status {
   .web-cards,
   .compact-list {
     grid-template-columns: 1fr;
-  }
-
-  .web-card-large,
-  .web-card-own {
-    transform: none;
   }
 
   .web-card {
