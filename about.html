@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About islands.bio</title>
+    <meta
+      name="description"
+      content="islands.bio is a personal space on the internet that belongs to you."
+    />
+    <link rel="preload" as="image" href="./islands-bg-optimized.jpg" />
+    <link rel="preload" as="image" href="./islands-word_white.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="about-body">
+    <div class="about-bg" aria-hidden="true"></div>
+
+    <header class="about-nav">
+      <a class="about-brand" href="./index.html" aria-label="islands.bio home">
+        <img src="./islands-word_white.png" alt="islands" />
+        <span>.bio</span>
+      </a>
+      <a href="./index.html">Home</a>
+    </header>
+
+    <main class="about-page">
+      <section class="about-hero" aria-labelledby="about-title">
+        <p class="about-kicker">a space that belongs to you</p>
+        <h1 id="about-title">You don’t own your online presence.</h1>
+        <div class="about-lede">
+          <p>
+            Your work lives inside platforms you don’t control — where formats change, reach disappears,
+            and your audience is never truly yours.
+          </p>
+          <p>
+            islands.bio is a different approach: a personal space on the internet that belongs to you.
+          </p>
+        </div>
+        <div class="about-actions" aria-label="About page actions">
+          <a class="about-button" href="#join">Join the waitlist</a>
+          <a class="about-home-link" href="./index.html">Return home</a>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>Everything you build lives on borrowed land.</h2>
+        <div class="about-copy">
+          <p>
+            Instagram holds your audience. Email platforms hold your list. TikTok, Twitter, LinkedIn —
+            each one keeps your content, your reach, and your relationships inside their system.
+          </p>
+          <p>
+            You don’t control how your work is seen. You don’t control how it’s distributed. And you
+            don’t control what changes next.
+          </p>
+        </div>
+        <div class="about-divider" aria-hidden="true"></div>
+        <div class="about-copy">
+          <p>One update, and everything shifts.</p>
+          <p>Your posts are resized. Your reach drops. Your audience stops seeing you.</p>
+          <p>You didn’t change anything — but your presence did.</p>
+        </div>
+      </section>
+
+      <section class="about-section about-section-wide">
+        <div class="about-section-heading">
+          <p class="about-kicker">the shift</p>
+          <h2>The internet is evolving.</h2>
+        </div>
+        <div class="web-cards" aria-label="Web evolution">
+          <article class="web-card">
+            <p class="web-label">Web 1</p>
+            <h3>Read</h3>
+            <p>Static pages. You could consume information, but not participate.</p>
+          </article>
+          <article class="web-card">
+            <p class="web-label">Web 2</p>
+            <h3>Read + Write</h3>
+            <p>
+              Social media made publishing easy — but platforms became the owners of your data, your
+              audience, and your visibility.
+            </p>
+          </article>
+          <article class="web-card">
+            <p class="web-label">Web 3</p>
+            <h3>Read + Write + Own</h3>
+            <p>
+              A shift toward ownership — where your content, identity, and audience aren’t locked inside
+              a platform.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>Ownership, in practice.</h2>
+        <div class="about-copy">
+          <p>Ownership doesn’t mean complexity.</p>
+          <p>
+            It means your work lives in a place you control. It means your audience can reach you without
+            an algorithm deciding for them. It means your presence doesn’t break every time a platform
+            updates.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>A space that’s yours.</h2>
+        <div class="about-copy">
+          <p>islands.bio gives you a personal island on the internet.</p>
+          <p>Not a profile inside a platform — but a space outside of it.</p>
+          <p>
+            A place where your work, your offerings, your content, and your identity live together — on
+            your terms.
+          </p>
+        </div>
+        <ul class="about-list">
+          <li>Share your offerings, courses, and events</li>
+          <li>Publish writing, media, and practices</li>
+          <li>Create a visual identity that feels like you</li>
+          <li>Keep everything in one place you control</li>
+        </ul>
+      </section>
+
+      <section class="about-section">
+        <h2>Connected, without being controlled.</h2>
+        <div class="about-copy">
+          <p>You can still follow others.</p>
+          <p>
+            islands.bio becomes a clean, simple feed of the people you’ve chosen — not what an algorithm
+            decides.
+          </p>
+          <p>When you click into someone, you enter their island.</p>
+          <p>Their design. Their structure. Their world.</p>
+          <p>Each person owns their space. The network simply connects them.</p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>For people building something real.</h2>
+        <div class="about-copy">
+          <p>
+            islands.bio is for creators, teachers, writers, artists, and communities who want a more
+            intentional online presence.
+          </p>
+        </div>
+        <ul class="about-list compact-list">
+          <li>Yoga teachers and facilitators</li>
+          <li>Independent creators</li>
+          <li>Writers and educators</li>
+          <li>Coaches and guides</li>
+          <li>Small online communities</li>
+        </ul>
+      </section>
+
+      <section id="join" class="about-section closing-cta">
+        <h2>Build something you actually own.</h2>
+        <p>islands.bio is still forming. Join early.</p>
+        <!-- TODO: Wire this form to the production waitlist provider when it is selected. -->
+        <form class="about-form" onsubmit="event.preventDefault(); this.dataset.sent = 'true';">
+          <label class="sr-only" for="about-email">Email address</label>
+          <input id="about-email" name="email" type="email" placeholder="enter your email" autocomplete="email" />
+          <button type="submit">Join waitlist</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="about-footer">
+      <a class="about-brand" href="./index.html" aria-label="islands.bio home">
+        <img src="./islands-word_white.png" alt="islands" />
+        <span>.bio</span>
+      </a>
+      <a href="./index.html">Home</a>
+    </footer>
+  </body>
+</html>
