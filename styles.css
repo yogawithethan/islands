@@ -437,24 +437,16 @@ form[data-sent="true"] .form-status {
 }
 
 .about-brand {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 2px;
+  display: inline-block;
   color: #fff;
-  font-weight: 650;
   line-height: 1;
 }
 
 .about-brand img {
-  width: 91px;
+  width: 98px;
   height: auto;
   display: block;
   filter: drop-shadow(0 9px 24px rgba(0, 0, 0, 0.22));
-}
-
-.about-brand span {
-  font-size: 16px;
-  transform: translateY(-3px);
 }
 
 .about-page {
@@ -754,9 +746,9 @@ form[data-sent="true"] .form-status {
 
 .about-form {
   display: flex;
-  align-items: end;
-  gap: 10px;
-  max-width: 520px;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 640px;
   position: relative;
 }
 
@@ -802,6 +794,7 @@ form[data-sent="true"] .form-status {
 .about-form button {
   height: 48px;
   padding: 0 20px;
+  margin-top: 29px;
   white-space: nowrap;
 }
 
@@ -885,6 +878,10 @@ form[data-sent="true"] .form-status {
     width: 100%;
   }
 
+  .about-form button {
+    margin-top: 0;
+  }
+
   .about-form .form-status {
     width: max-content;
   }
@@ -892,11 +889,7 @@ form[data-sent="true"] .form-status {
 
 @media (max-width: 520px) {
   .about-brand img {
-    width: 78px;
-  }
-
-  .about-brand span {
-    font-size: 14px;
+    width: 84px;
   }
 
   .about-hero h1 {
