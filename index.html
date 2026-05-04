@@ -45,7 +45,12 @@
 
       <section class="signup" aria-label="Email updates">
         <p>something beautiful is coming.</p>
-        <form onsubmit="event.preventDefault(); this.dataset.sent = 'true';">
+        <form action="https://formsubmit.co/yoga@ethanhill.org" method="POST">
+          <input type="hidden" name="_next" value="https://islands-bio.pages.dev/thanks.html" />
+          <input type="hidden" name="_subject" value="New islands.bio waitlist signup" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="honey-field" tabindex="-1" autocomplete="off" />
           <label class="sr-only" for="email">Email address</label>
           <input
             id="email"
@@ -59,7 +64,6 @@
           <button type="submit" aria-label="Join the waitlist">
             <span aria-hidden="true">→</span>
           </button>
-          <span id="landing-form-status" class="form-status" aria-live="polite">you’re on the shore.</span>
         </form>
       </section>
 

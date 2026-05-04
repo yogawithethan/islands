@@ -83,25 +83,53 @@
         </div>
         <div class="web-cards" aria-label="Web evolution">
           <article class="web-card web-card-small">
-            <p class="web-label">Web 1</p>
+            <div class="web-card-top">
+              <span class="web-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                  <path d="M7 24s6.5-10 17-10 17 10 17 10-6.5 10-17 10S7 24 7 24Z" />
+                  <circle cx="24" cy="24" r="5.5" />
+                </svg>
+              </span>
+              <p class="web-label">Web 1</p>
+            </div>
             <h3>Read</h3>
             <p>Static pages. You could consume information, but not participate.</p>
+            <p class="web-note">You visited pages.</p>
           </article>
           <article class="web-card web-card-large">
-            <p class="web-label">Web 2</p>
+            <div class="web-card-top">
+              <span class="web-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                  <path d="M14 34 32.5 15.5a4 4 0 0 1 5.7 5.7L19.6 39.8 11 42l3-8Z" />
+                  <path d="m29 19 6 6" />
+                </svg>
+              </span>
+              <p class="web-label">Web 2</p>
+            </div>
             <h3>Read + Write</h3>
             <p>
               Social media made publishing easy — but platforms became the owners of your data, your
               audience, and your visibility.
             </p>
+            <p class="web-note">You published inside platforms.</p>
           </article>
           <article class="web-card web-card-small web-card-own">
-            <p class="web-label">Web 3</p>
+            <div class="web-card-top">
+              <span class="web-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                  <path d="M16 22v-6a8 8 0 0 1 16 0v6" />
+                  <path d="M13 22h22v18H13z" />
+                  <path d="M24 29v5" />
+                </svg>
+              </span>
+              <p class="web-label">Web 3</p>
+            </div>
             <h3>Read + Write + Own</h3>
             <p>
               A shift toward ownership — where your content, identity, and audience aren’t locked inside
               a platform.
             </p>
+            <p class="web-note">You keep the ground beneath you.</p>
           </article>
         </div>
       </section>
@@ -170,8 +198,12 @@
       <section id="join" class="about-section closing-cta">
         <h2>Build something you actually own.</h2>
         <p>islands.bio is still forming. Join early.</p>
-        <!-- TODO: Wire this form to the production waitlist provider when it is selected. -->
-        <form class="about-form" onsubmit="event.preventDefault(); this.dataset.sent = 'true';">
+        <form class="about-form" action="https://formsubmit.co/yoga@ethanhill.org" method="POST">
+          <input type="hidden" name="_next" value="https://islands-bio.pages.dev/thanks.html" />
+          <input type="hidden" name="_subject" value="New islands.bio waitlist signup" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="honey-field" tabindex="-1" autocomplete="off" />
           <div class="about-field">
             <label for="about-email">Email address</label>
             <input
@@ -186,7 +218,6 @@
             <p id="about-email-help">No noise. Just early access when islands.bio opens.</p>
           </div>
           <button type="submit">Join waitlist</button>
-          <p class="form-status" aria-live="polite">You’re on the shore.</p>
         </form>
       </section>
     </main>

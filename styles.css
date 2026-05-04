@@ -244,6 +244,15 @@ form[data-sent="true"] .form-status {
   transform: translateX(-50%) translateY(0);
 }
 
+.honey-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .site-footer {
   color: var(--white);
   font-size: 11px;
@@ -588,7 +597,7 @@ form[data-sent="true"] .form-status {
 
 .web-card {
   min-height: 244px;
-  padding: 24px;
+  padding: 22px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
   background:
@@ -598,6 +607,22 @@ form[data-sent="true"] .form-status {
     inset 0 1px 0 rgba(255, 255, 255, 0.1),
     0 24px 80px rgba(4, 16, 28, 0.2);
   backdrop-filter: blur(18px);
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  overflow: hidden;
+  position: relative;
+}
+
+.web-card::after {
+  content: "";
+  position: absolute;
+  right: -38px;
+  bottom: -38px;
+  width: 116px;
+  height: 116px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
 }
 
 .web-card-large {
@@ -615,11 +640,58 @@ form[data-sent="true"] .form-status {
   line-height: 1.1;
 }
 
-.web-card p:last-child {
-  margin: 18px 0 0;
+.web-card > p:not(.web-note) {
+  margin: 0;
   color: rgba(255, 255, 255, 0.74);
   font-size: 16px;
   line-height: 1.55;
+}
+
+.web-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.web-card-top .web-label {
+  margin: 0;
+}
+
+.web-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 7px;
+  color: rgba(255, 255, 255, 0.84);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.04)),
+    rgba(255, 255, 255, 0.03);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.web-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.web-icon path,
+.web-icon circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.web-note {
+  align-self: end;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 13px;
+  line-height: 1.35;
 }
 
 .about-list {
@@ -680,6 +752,7 @@ form[data-sent="true"] .form-status {
 
 .about-field {
   flex: 1;
+  min-width: 0;
 }
 
 .about-field label {
@@ -699,6 +772,7 @@ form[data-sent="true"] .form-status {
 
 .about-form input {
   min-width: 0;
+  width: 100%;
   flex: 1;
   height: 48px;
   border: 1px solid rgba(255, 255, 255, 0.28);
