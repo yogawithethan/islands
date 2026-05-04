@@ -8,11 +8,25 @@
       name="description"
       content="islands.bio is a personal space on the internet that belongs to you."
     />
+    <meta property="og:title" content="About islands.bio" />
+    <meta
+      property="og:description"
+      content="A personal space on the internet that belongs to you."
+    />
+    <meta property="og:image" content="https://islands-bio.pages.dev/islands-bg-optimized.jpg" />
+    <link rel="icon" href="./islands-word.png" type="image/png" />
     <link rel="preload" as="image" href="./islands-bg-optimized.jpg" />
     <link rel="preload" as="image" href="./islands-word_white.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="about-body">
+    <a class="skip-link" href="#about-title">Skip to content</a>
     <div class="about-bg" aria-hidden="true"></div>
 
     <header class="about-nav">
@@ -68,12 +82,12 @@
           <h2>The internet is evolving.</h2>
         </div>
         <div class="web-cards" aria-label="Web evolution">
-          <article class="web-card">
+          <article class="web-card web-card-small">
             <p class="web-label">Web 1</p>
             <h3>Read</h3>
             <p>Static pages. You could consume information, but not participate.</p>
           </article>
-          <article class="web-card">
+          <article class="web-card web-card-large">
             <p class="web-label">Web 2</p>
             <h3>Read + Write</h3>
             <p>
@@ -81,7 +95,7 @@
               audience, and your visibility.
             </p>
           </article>
-          <article class="web-card">
+          <article class="web-card web-card-small web-card-own">
             <p class="web-label">Web 3</p>
             <h3>Read + Write + Own</h3>
             <p>
@@ -158,9 +172,21 @@
         <p>islands.bio is still forming. Join early.</p>
         <!-- TODO: Wire this form to the production waitlist provider when it is selected. -->
         <form class="about-form" onsubmit="event.preventDefault(); this.dataset.sent = 'true';">
-          <label class="sr-only" for="about-email">Email address</label>
-          <input id="about-email" name="email" type="email" placeholder="enter your email" autocomplete="email" />
+          <div class="about-field">
+            <label for="about-email">Email address</label>
+            <input
+              id="about-email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+              aria-describedby="about-email-help"
+            />
+            <p id="about-email-help">No noise. Just early access when islands.bio opens.</p>
+          </div>
           <button type="submit">Join waitlist</button>
+          <p class="form-status" aria-live="polite">You’re on the shore.</p>
         </form>
       </section>
     </main>

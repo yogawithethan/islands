@@ -8,11 +8,25 @@
       name="description"
       content="The internet is made of islands. A new way to create, connect, and exist online."
     />
+    <meta property="og:title" content="islands.bio" />
+    <meta
+      property="og:description"
+      content="A new way to create, connect, and exist online."
+    />
+    <meta property="og:image" content="https://islands-bio.pages.dev/islands-bg-optimized.jpg" />
+    <link rel="icon" href="./islands-word.png" type="image/png" />
     <link rel="preload" as="image" href="./islands-bg-optimized.jpg" />
     <link rel="preload" as="image" href="./islands-word.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#hero-title">Skip to content</a>
     <main class="stage" aria-labelledby="hero-title">
       <div class="hero-bg" aria-hidden="true"></div>
 
@@ -33,10 +47,19 @@
         <p>something beautiful is coming.</p>
         <form onsubmit="event.preventDefault(); this.dataset.sent = 'true';">
           <label class="sr-only" for="email">Email address</label>
-          <input id="email" name="email" type="email" placeholder="enter your email" autocomplete="email" />
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="enter your email"
+            autocomplete="email"
+            required
+            aria-describedby="landing-form-status"
+          />
           <button type="submit" aria-label="Join the waitlist">
             <span aria-hidden="true">→</span>
           </button>
+          <span id="landing-form-status" class="form-status" aria-live="polite">you’re on the shore.</span>
         </form>
       </section>
 
@@ -45,7 +68,7 @@
           <img class="footer-mark" src="./islands-word_white.png" alt="islands" />
           <nav aria-label="Footer">
             <a href="./about.html">about</a>
-            <a href="#updates">updates</a>
+            <a href="#email">updates</a>
             <a href="mailto:hello@islands.bio">contact</a>
           </nav>
         </div>
